@@ -1,9 +1,9 @@
-import MuiLoginForm from "./components/MuiLoginForm";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
     <div>
-      <MuiLoginForm />
+      <ContactForm />
     </div>
   );
 }
