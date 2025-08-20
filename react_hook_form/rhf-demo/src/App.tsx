@@ -1,9 +1,9 @@
-import ContactForm from "./components/ContactForm";
 import "./App.css";
+import YupContactForm from "./components/YupContactForm";
 function App() {
   return (
     <div>
-      <ContactForm />
+      <YupContactForm/>
     </div>
   );
 }

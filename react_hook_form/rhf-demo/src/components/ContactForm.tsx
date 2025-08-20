@@ -16,7 +16,8 @@ const ContactForm = () => {
   const Submitter = (data: ContactForm) => {
     console.log(data);
   };
-  const { register, formState, handleSubmit } = form;
+
+  const { register, formState, handleSubmit, trigger } = form;
   const { errors } = formState;
   return (
     <div>
@@ -71,6 +72,10 @@ const ContactForm = () => {
           <p className="error">{errors.message?.message}</p>
         </div>
         <button> Submit </button>
+        <button type="button" onClick={() => trigger("email")}>
+          {" "}
+          Validate
+        </button>
       </form>
 
       {/* <TextField label="name" type="text" {...register("name")}></TextField>
