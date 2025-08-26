@@ -1,23 +1,31 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function DashboardPage() {
-  const [throwError, setThrowError] = useState(false)
+  //   const [throwError, setThrowError] = useState(false);
 
-  if (throwError) {
-    throw new Error('This is a simulated error!')
-  }
+  //   if (throwError) {
+  //     throw new Error("This is a simulated error!");
+  //   }
+
+  // this is the dev mode one
+    throw new Error("Render-time crash 🚨")
+
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <button
+      {/* this is the build error test */}
+      {/* <button
         className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
         onClick={() => setThrowError(true)}
       >
         Trigger Error
-      </button>
+        
+      </button> */}
+      {/* this is the dev error test */}
+      
     </div>
-  )
+  );
 }
