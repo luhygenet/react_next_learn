@@ -10,7 +10,7 @@ export default function DashboardPage() {
   //   }
 
   // this is the dev mode one
-    throw new Error("Render-time crash 🚨")
+    // throw new Error("Render-time crash 🚨")
 
 
   return (
