@@ -3,18 +3,23 @@
 import { usePathname } from "next/navigation";
 
 // Simplified breadcrumbs logic
-export default function Breadcrumbs() {
-  const pathname = usePathname();
-  const segments = pathname.split("/");
+// export default function Breadcrumbs() {
+//   const pathname = usePathname();
+//   const segments = pathname.split("/");
 
-  return (
-    <nav>
-      {segments.map((segment, index) => (
-        <span key={index}>
-          {" > "}
-          {segment}
-        </span>
-      ))}
-    </nav>
-  );
+//   return (
+//     <nav>
+//       {segments.map((segment, index) => (
+//         <span key={index}>
+//           {" > "}
+//           {segment}
+//         </span>
+//       ))}
+//     </nav>
+//   );
+// }
+
+export default function HomePage() {
+  return <p>Welcome to the home page</p>
 }
+
