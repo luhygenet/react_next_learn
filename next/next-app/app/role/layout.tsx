@@ -34,7 +34,7 @@ const RoleLayout = ({
           <ul className="space-y-2">
             <li>Home</li>
             <li>Analytics</li>
-            <li>Settings</li>
+            <li>Settngs</li>
           </ul>
         </aside>
 

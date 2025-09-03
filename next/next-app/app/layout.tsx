@@ -74,7 +74,7 @@
 import { useSelectedLayoutSegment } from "next/dist/client/components/navigation";
 import React, { ReactNode } from "react";
 
-function RootLayout({
+function RootsLayout({
   children,
   auth,
 }: {
@@ -85,11 +85,13 @@ function RootLayout({
   return (
     <html>
       <body>
-        {children}
+        {React.Children.map(children, (child, index) => (
+          <React.Fragment key={index}>{child}</React.Fragment>
+        ))}
         <p>{loginSegment}</p>
       </body>
     </html>
   );
 }
 
-export default RootLayout;
+export default RootsLayout;
