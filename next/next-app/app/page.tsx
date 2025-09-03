@@ -19,7 +19,10 @@ import { usePathname } from "next/navigation";
 //   );
 // }
 
-export default function HomePage() {
-  return <p>Welcome to the home page</p>
-}
+import React from "react";
 
+const page = () => {
+  return <div>Welcome to home page</div>;
+};
+
+export default page;
