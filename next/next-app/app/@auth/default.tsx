@@ -2,7 +2,7 @@ import React from 'react'
 
 const Default = () => {
   return (
-    <div>No defaults page</div>
+    <div>No defaults Auth page</div>
   )
 }
 

@@ -72,6 +72,7 @@
 //   );
 // };
 import { useSelectedLayoutSegment } from "next/dist/client/components/navigation";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 function RootsLayout({
@@ -85,10 +86,16 @@ function RootsLayout({
   return (
     <html>
       <body>
+        <nav>
+          <Link href="/login">Open modal</Link>
+        </nav>
         {React.Children.map(children, (child, index) => (
           <React.Fragment key={index}>{child}</React.Fragment>
         ))}
-        <p>{loginSegment}</p>
+        {React.Children.map(auth, (child, index) => (
+          <React.Fragment key={index}>{child}</React.Fragment>
+        ))}
+        
       </body>
     </html>
   );

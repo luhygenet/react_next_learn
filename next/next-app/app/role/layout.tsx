@@ -11,12 +11,7 @@ const RoleLayout = ({
   user: React.ReactNode;
 }) => {
   const role = getRole(); // "admin" or false
-  const renderSlot = (slot: React.ReactNode) => {
-    // If slot is an array, map with keys; else just return it
-    return Array.isArray(slot)
-      ? slot.map((child, i) => <React.Fragment key={i}>{child}</React.Fragment>)
-      : slot;
-  };
+  
   return (
     <div className="min-h-screen flex flex-col">
       {/* Top Navbar */}
@@ -39,7 +34,7 @@ const RoleLayout = ({
         </aside>
 
         {/* Main Content - Conditional */}
-        <main className="flex-1 p-6">{renderSlot(role === "admin" ? admin : user)}</main>
+        <main className="flex-1 p-6">{role === "admin" ? admin : user}</main>
       </div>
     </div>
   );
